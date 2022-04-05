@@ -1,0 +1,41 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Playlist Song API",
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/api/v1/playlist": {
+            "get": {
+                "tags": [
+                    "playlist"
+                ],
+                "summary": "Get Playlist",
+                "description": "Playlist of songs",
+                "operationId": "playlist",
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Playlist display"
+                                        },
+                                        "data": {
+                                            "type": "string",
+                                            "example": "paginated songs and playlist"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
